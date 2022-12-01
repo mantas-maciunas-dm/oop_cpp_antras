@@ -44,3 +44,4 @@ using std::ws;
 using std::remove_copy_if;
 using std::istream;
 using std::swap;
+using std::ostream;
