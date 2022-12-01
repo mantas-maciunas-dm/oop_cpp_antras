@@ -27,4 +27,15 @@ public:
     ~studentas();
     studentas(const studentas &kitas);
     studentas& operator=(studentas& kitas);
+
+    friend ostream& operator<<(ostream& output, const studentas& S) {
+        output << left << setw(25) << S.paimti_varda() << setw(25) << S.paimti_pavarde() << setw(15) << S.paimti_galutini_vid() <<
+            setw(15) << S.paimti_galutini_med() << endl;
+        return output;
+    }
+
+    friend istream& operator>>(istream& input, studentas& S) {
+        input >> S.vardas >> S.pavarde;
+        return input;
+    }
 };
