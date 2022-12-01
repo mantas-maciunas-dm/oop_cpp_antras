@@ -3,5 +3,5 @@
 
 bool nelaimeliu_suradimas(studentas stud)
 {
-	return (stud.galutinis_vid < 5.0);
+	return (stud.paimti_galutini_vid() < 5.0);
 }

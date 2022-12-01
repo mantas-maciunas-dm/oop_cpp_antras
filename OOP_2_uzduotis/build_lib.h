@@ -42,3 +42,5 @@ using std::istream_iterator;
 using std::list;
 using std::ws;
 using std::remove_copy_if;
+using std::istream;
+using std::swap;
