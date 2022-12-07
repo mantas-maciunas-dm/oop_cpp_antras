@@ -5,56 +5,27 @@
 
 unsigned int Zodziai_eiluteje(string const& str)
 {
+    /*! 
+    *   Funkcija randa zodziu skaiciu duotame string tekste.
+    * 
+    *   @param str Tekstas, kuriame atliekama paieska.
+    */
     stringstream stream(str);
     return std::distance(istream_iterator<string>(stream), istream_iterator<string>());
 }
 
 
-int skaiciaus_patikrinimas(string zinute, bool check)
-{
-    string tikrinamas_skaicius;
-    bool ar_skaicius = false;
-    bool ar_tarp_vieno_ir_desimt = false;
-    int patikrintas_skaicius = 0;
-    while (!ar_skaicius && !ar_tarp_vieno_ir_desimt)
-    {
-        cout << zinute;
-        cin >> tikrinamas_skaicius;
-        for (int i = 0; i < tikrinamas_skaicius.size(); i++)
-        {
-            if (isdigit(tikrinamas_skaicius[i]) == false && tikrinamas_skaicius[i] != '-')
-            {
-                break;
-            }
-            if (i == tikrinamas_skaicius.size() - 1)
-            {
-                ar_skaicius = true;
-            }
-        }
-        if (ar_skaicius)
-        {
-            patikrintas_skaicius = stoi(tikrinamas_skaicius);
-        }
-        if (!check && patikrintas_skaicius == -1)
-        {
-            break;
-        }
-        if (patikrintas_skaicius > 0 && patikrintas_skaicius <= 10)
-        {
-            ar_tarp_vieno_ir_desimt = true;
-        }
-        else
-        {
-            ar_skaicius = false;
-        }
-    }
-
-    return patikrintas_skaicius;
-}
-
-
 void ivedimas_vector(vector<studentas>& studentai, string failo_pavadinimas, int* nd_skaicius)
 {
+    /*! \brief Funkcija uzpildo nurodyta studentu vektoriu.
+    *
+    *   Funkcija uzpildo nurodyta studentu vektoriu studentais, esanciais nurodytame faile. Jei failo atidaryti nepavyko,
+    *   vartotojui ismetama klaida. Taip pat yra matuojama, kiek laiko uztrunka sis procesas.
+    * 
+    *   @param studentai Vektorius, kuri norima uzpildyti.
+    *   @param failo_pavadinimas Failas, is kurio skaitomi duomenys.
+    *   @param nd_skaicius Namu darbu kiekis.
+    */
     auto matavimo_pradzia = high_resolution_clock::now();
     string eilute;
     ifstream studentu_failas(failo_pavadinimas);
@@ -115,6 +86,14 @@ void ivedimas_vector(vector<studentas>& studentai, string failo_pavadinimas, int
 
 void isvedimas_vector(string failo_pav, vector<studentas> vektorius)
 {
+    /*! \brief Funkcija spausdina nurodyta studentu vektoriu i faila.
+    *
+    *   Funkcija spausdina nurodyta studentu vektoriu i nurodyta faila. Taip pat yra atliekamas matavimas, kuris nurodo, kiek laiko uztruko
+    *   sis procesas.
+    *
+    *   @param failo_pav Failas, i kuri rasomi duomenys.
+    *   @param vektorius Studentu vektorius, kurio duomenys yra spausdinami.
+    */
     ofstream stud_failas(failo_pav);
 
     auto matavimo_pradzia = high_resolution_clock::now();

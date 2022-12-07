@@ -3,6 +3,14 @@
 
 void failo_sukurimas(int kiekis)
 {
+	/*! \brief Funkcija sukuria faila kursiokai{x}.txt, kur x yra nurodytas skaicius.
+	* 
+	*   Funkcija sukuria faila kursiokai{x}.txt su x studentu duomenimis, kur x yra nurodytas skaicius.
+	*	Generuojamos sabloniski vardai ir pavardes(Vardas{x} Pavarde{x}), o namu darbu bei egzamino 
+	*	pazymiai generuojami atsitiktinai. Baigus darba failas uzdaromas.
+	* 
+	*	@param kiekis Norimas studentu kiekis.
+	*/
 	string failo_pavadinimas = "kursiokai" + to_string(kiekis) + ".txt";
 	ofstream stud_failas (failo_pavadinimas);
 
