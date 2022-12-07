@@ -91,7 +91,7 @@ void ivedimas_vector(vector<studentas>& studentai, string failo_pavadinimas, int
             }
             r >> egzaminas;
 
-            stud.sukurti_studenta(vardas, pavarde, pazymiai, egzaminas);
+            stud.sukurti_zmogu(vardas, pavarde, pazymiai, egzaminas);
             stud.skaiciuoti_galutini_med();
             stud.skaiciuoti_galutini_vid();
             studentu_skaicius += 1;

@@ -36,7 +36,7 @@ studentas &studentas::operator=(studentas& kitas)
 }
 
 
-void studentas::sukurti_studenta(string vardas_, string pavarde_, vector<int> pazymiai_, int egzaminas_)
+void studentas::sukurti_zmogu(string vardas_, string pavarde_, vector<int> pazymiai_, int egzaminas_)
 {
 	vardas =  vardas_;
 	pavarde =  pavarde_;
