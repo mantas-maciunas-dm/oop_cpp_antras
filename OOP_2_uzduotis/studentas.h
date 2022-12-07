@@ -1,18 +1,27 @@
 #pragma once
 #include "build_lib.h"
 
-class studentas
+class zmogus
 {
-private:
+public:
+    virtual string paimti_varda() const = 0;
+    virtual string paimti_pavarde() const = 0;
+protected:
     string vardas;
     string pavarde;
+};
+
+
+class studentas : public zmogus
+{
+private:
     vector<int> pazymiai;
     int egzaminas;
     double galutinis_vid;
     double galutinis_med;
 public:
     studentas() : egzaminas(0) { };
-    void sukurti_studenta(string vardas_, string pavarde_, vector<int> pazymiai_, int egzaminas_);
+    void sukurti_zmogu(string vardas_, string pavarde_, vector<int> pazymiai_, int egzaminas_);
     void sukurti_pazymi(int paz);
     void istrinti_nd();
     string paimti_varda() const { return vardas; }
