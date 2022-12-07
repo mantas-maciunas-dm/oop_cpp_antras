@@ -36,3 +36,7 @@ O3:
 # V1.2
 
 Dabar programoje yra pritaikytas "Rule of three" principas bei įdėti įvesties ir išvesties operatoriai klasei studentas.
+
+# V1.5
+
+Dabar programoje vietoj vienos klasės studentas yra naudojamos dvi: zmogus bei jos išvestinė klasė studentas. Klasė zmogus yra abstrakti, todėl jos objektų sukurti negalima, galima sukurti tik išvestinių klasių objektus.
