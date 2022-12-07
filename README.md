@@ -40,3 +40,7 @@ Dabar programoje yra pritaikytas "Rule of three" principas bei įdėti įvesties
 # V1.5
 
 Dabar programoje vietoj vienos klasės studentas yra naudojamos dvi: zmogus bei jos išvestinė klasė studentas. Klasė zmogus yra abstrakti, todėl jos objektų sukurti negalima, galima sukurti tik išvestinių klasių objektus.
+
+# V2.0
+
+Programos dokumentacija realizuota naudojant Doxygen. Visą programos dokumentaciją galima rasti aplanke "dokumentacija" atidarius index.html failą.
